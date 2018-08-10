@@ -3,7 +3,7 @@ import Router from 'vue-router';
 
 import Customers from './components/AppCustomers.vue';
 import Products from './components/AppProducts.vue';
-console.log(Customers);
+
 
 Vue.use(Router);
 

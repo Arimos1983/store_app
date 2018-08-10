@@ -1,5 +1,10 @@
 <template>
   <div >
+    <form class="form" @submit.prevent>
+        <input v-model="newCustomer.fullname" type="text" placeholder="name" />
+        <input v-model="newCustomer.email" type="text" placeholder="email" />
+        <button @click="addCustomer" type="submit">Add Customer</button>
+    </form>
     <table class="table">
         <tr v-for="customer in customers" :key="customer.id">
           <td>{{customer.fullname}}</td>
@@ -18,7 +23,9 @@ import { customerService } from '../services/CustomerService.js'
 export default {
     data()
     {
+        
         return {
+        newCustomer: {products: []},
         customers: customerService.list()
         }
     },
@@ -27,6 +34,11 @@ export default {
         deleteCustomer(customer)
         {
             customerService.deleteCustomer(customer);
+        },
+        addCustomer(newCustomer)
+        { 
+            customerService.addCustomer(this.newCustomer);
+            this.newCustomer= {};
         }
     }
   
