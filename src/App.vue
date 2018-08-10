@@ -1,7 +1,12 @@
 <template>
   <div id="app">
+    <nav class="navbar navbar-light bg-dark">
+      <router-link to="/customers">Customers</router-link><br>
+      <router-link to="/products">Products</router-link><br>
+    </nav>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
