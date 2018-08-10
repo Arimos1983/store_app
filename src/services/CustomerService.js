@@ -20,6 +20,10 @@ class  CustomerService {
         newCustomer.id=lastId;
         lastId++;
     }
+    findCustomer(customer)
+    {
+        return customers[this.customers.indexOf(customer)]
+    }
 
 }
 
