@@ -13,7 +13,7 @@
             <button @click="deleteCustomer(customer)">Delete</button>
           </td>
           <td>
-            <router-link to="/customers/:id">Latest Purchases</router-link>
+            <router-link :to="{ name: 'Purchases', params: {id: customer.id}}">Latest Purchases</router-link>
           </td>
         </tr>
     </table>
@@ -38,7 +38,7 @@ export default {
         {
             customerService.deleteCustomer(customer);
         },
-        addCustomer(newCustomer)
+        addCustomer()
         { 
             customerService.addCustomer(this.newCustomer);
             this.newCustomer= {};

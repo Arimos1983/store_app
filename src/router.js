@@ -14,6 +14,6 @@ export default new Router({
         {path: '/', redirect: 'customers'},
         {path: '/customers', component: Customers },
         {path: '/products', component: Products},
-        {path: '/customers/:id', component: Purchases}
+        {path: '/customers/:id', component: Purchases, name: 'Purchases', props: true}
     ]
 })

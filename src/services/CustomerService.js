@@ -1,7 +1,7 @@
 const customers = [
     {id:1, fullname: "Pera Peric", email: "pera@gmail.com", products: [] },
     {id:2, fullname: "Mile Milic", email: "mile@gmail.com", products: [] },
-    {id:3, fullname: "Jelena Eric", email: "jelena@gmail.com", products: [] }
+    {id:3, fullname: "Jelena Beric", email: "jelena@gmail.com", products: [] }
 ]
 
 let lastId=4;
@@ -9,6 +9,9 @@ let lastId=4;
 class  CustomerService {
     list(){
         return customers;
+    }
+    findCustomer(id) {
+        return customers.find(customer => customer.id == id);
     }
     deleteCustomer(customer)
     {
@@ -20,11 +23,6 @@ class  CustomerService {
         newCustomer.id=lastId;
         lastId++;
     }
-    findCustomer(customer)
-    {
-        return customers[this.customers.indexOf(customer)]
-    }
-
 }
 
 export const customerService = new CustomerService();
