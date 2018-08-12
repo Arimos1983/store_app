@@ -6,7 +6,7 @@ const customers = [
 
 let lastId=4;
 
-class  CustomerService {
+export default class  CustomerService {
     list(){
         return customers;
     }
