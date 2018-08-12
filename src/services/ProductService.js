@@ -23,6 +23,9 @@ export default class ProductService {
         if(tempProduct.quantity > 0){
         tempProduct.quantity--; }
     }
+    findProduct(id) {
+        return products.find(product => product.id == id);
+    }
 
 }
 

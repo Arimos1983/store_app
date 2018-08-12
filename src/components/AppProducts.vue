@@ -17,6 +17,9 @@
             <button @click="incrementQuantity(product)" >+</button>
             <button @click="decrementQuantity(product)">-</button>
           </td>
+          <td >
+           <router-link class="btn btn-primary" :to="{ name: 'PurchaseProduct', params: { id: product.id }}">Buy</router-link>
+          </td>
         </tr>
     </table>
   </div>

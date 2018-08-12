@@ -23,6 +23,9 @@ export default class  CustomerService {
         newCustomer.id=lastId;
         lastId++;
     }
+    addProductToCustomer(customer, product) {
+        customer.products.push(product)
+    }
 }
 
 export const customerService = new CustomerService();
